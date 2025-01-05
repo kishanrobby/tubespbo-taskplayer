@@ -21,7 +21,7 @@ public abstract class Model<E> {
     private String otherQuery = "";
 
     private void connect() {
-        String db_name = "databasetaskplayer";
+        String db_name = "tes";
         String username = "root";
         String password = "";
         try {
