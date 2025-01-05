@@ -223,16 +223,16 @@
 
         .merchant {
             position: absolute;
-            bottom: 130px;
-            left: 100px;
+            bottom: 10%;
+            left: 6%;
             width: 280px;
             height: 450px;
         }
 
         .points-display {
             position: absolute;
-            bottom: 40px;
-            left: 115px;
+            bottom: 6%;
+            left: 6%;
             background: rgba(0, 0, 0, 0.5);
             color: white;
             padding: 15px 30px;
@@ -242,7 +242,7 @@
 
         .merchant-dialog {
             position: absolute;
-            bottom: 20px;
+            bottom: 3%;
             left: 350px;
             width: 600px;
             height: 120px;
@@ -272,7 +272,7 @@
 
         .button-container {
             position: absolute;
-            bottom: 40px;
+            bottom: 5%;
             right: 390px;
             display: flex;
             gap: 20px;
