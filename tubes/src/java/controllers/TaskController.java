@@ -10,10 +10,7 @@ import java.io.IOException;
 
 public class TaskController extends HttpServlet {
 
-    private static final String LIST_PAGE = "tasks?action=list";
-    private static final String ADD_HABIT_PAGE = "add_habit.jsp";
-    private static final String ADD_DAILY_PAGE = "add_daily.jsp";
-    private static final String ADD_TODO_PAGE = "add_todo.jsp";
+    private static final String TASK_PAGE = "task.jsp";  // Use a single task.jsp page.
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -25,19 +22,9 @@ public class TaskController extends HttpServlet {
             return;
         }
 
-        switch (action) {
-            case "addHabit":
-                forwardToPage(request, response, ADD_HABIT_PAGE);
-                break;
-            case "addDaily":
-                forwardToPage(request, response, ADD_DAILY_PAGE);
-                break;
-            case "addToDo":
-                forwardToPage(request, response, ADD_TODO_PAGE);
-                break;
-            default:
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid action.");
-        }
+        // Forward the request to the task.jsp page with the proper task type.
+        request.setAttribute("action", action);
+        request.getRequestDispatcher(TASK_PAGE).forward(request, response);
     }
 
     @Override
@@ -137,37 +124,23 @@ public class TaskController extends HttpServlet {
     }
 
     private void redirectWithMessage(HttpServletResponse response, String message) throws IOException {
-        response.sendRedirect(LIST_PAGE + "&message=" + message);
-    }
-
-    private void forwardToPage(HttpServletRequest request, HttpServletResponse response, String page)
-            throws ServletException, IOException {
-        request.getRequestDispatcher(page).forward(request, response);
+        response.sendRedirect("tasks?action=list&message=" + message);  // You can adapt this page if needed.
     }
 
     private void handleValidationError(HttpServletRequest request, HttpServletResponse response, String action, String errorMessage)
             throws ServletException, IOException {
+        // Set the error and task attributes for display.
         request.setAttribute("error", errorMessage);
-        request.getRequestDispatcher(getErrorPage(action)).forward(request, response);
+        request.setAttribute("action", action);
+        // Re-forward to task.jsp with error.
+        request.getRequestDispatcher(TASK_PAGE).forward(request, response);
     }
 
     private void handleServerError(HttpServletRequest request, HttpServletResponse response, String action, Exception e)
             throws ServletException, IOException {
         e.printStackTrace(); // Log the error for debugging purposes
         request.setAttribute("error", "An unexpected error occurred. Please try again.");
-        request.getRequestDispatcher(getErrorPage(action)).forward(request, response);
-    }
-
-    private String getErrorPage(String action) {
-        switch (action) {
-            case "addHabit":
-                return ADD_HABIT_PAGE;
-            case "addDaily":
-                return ADD_DAILY_PAGE;
-            case "addToDo":
-                return ADD_TODO_PAGE;
-            default:
-                return LIST_PAGE;
-        }
+        request.setAttribute("action", action);
+        request.getRequestDispatcher(TASK_PAGE).forward(request, response);
     }
 }
