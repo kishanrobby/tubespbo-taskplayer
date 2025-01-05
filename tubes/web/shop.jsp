@@ -35,8 +35,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 2560px;
-            height: 1440px;
+            width: 1440px;
+            height: 824px;
         }
 
         .background1 {
@@ -72,8 +72,8 @@
         }
 
         .logo {
-            width: 90px;
-            height: 80px;
+            width: 80px;
+            height: 70px;
         }
 
         .taskplayer-text {
@@ -86,7 +86,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 240px;
+            width: 230px;
             height: 30px;
         }
 
@@ -111,7 +111,7 @@
         }
 
         .menu-item {
-            font-size: 15px;
+            font-size: 12px;
             color: #ffffff;
             text-decoration: none;
             cursor: pointer;
@@ -140,8 +140,8 @@
             left: 52%;
             transform: translateX(-50%);
             z-index: 2;
-            width: 400px;
-            height: 80px;
+            width: 320px;
+            height: 65px;
         }
 
         .welcome-banner {
@@ -164,8 +164,8 @@
             top: 140px;
             left: 55%;
             transform: translateX(-50%);
-            width: 950px;
-            height: 650px;
+            width: 850px;
+            height: 550px;
             background: url('img_shop/book.png') no-repeat center;
             background-size: contain;
         }
@@ -178,7 +178,7 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             gap: 40px;
-            width: 300px;
+            width: 270px;
             align-items: center;
             justify-items: center;
         }
@@ -216,7 +216,7 @@
             left: -20px;
             right: -20px;
             bottom: -40px;
-            background: url('img/Char Select.png') no-repeat center center;
+            background: url('img_shop/Char Select.png') no-repeat center center;
             background-size: contain;
             z-index: -1;
         }
@@ -225,8 +225,8 @@
             position: absolute;
             bottom: 10%;
             left: 6%;
-            width: 280px;
-            height: 450px;
+            width: 200px;
+            height: 370px;
         }
 
         .points-display {
@@ -237,21 +237,21 @@
             color: white;
             padding: 15px 30px;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 11px;
         }
 
         .merchant-dialog {
             position: absolute;
-            bottom: 3%;
-            left: 350px;
-            width: 600px;
-            height: 120px;
+            bottom: 2%;
+            left: 18%;
+            width: 520px;
+            height: 100px;
             background: url('img_shop/MerchantTextBanner.png') no-repeat center;
             background-size: contain;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 14px;
+            font-size: 12px;
             padding: 20px;
             text-align: center;
             font-family: 'Press Start 2P', monospace;
@@ -273,14 +273,14 @@
         .button-container {
             position: absolute;
             bottom: 5%;
-            right: 390px;
+            right: 23%;
             display: flex;
             gap: 20px;
         }
 
         .button {
-            width: 190px;
-            height: 80px;
+            width: 180px;
+            height: 70px;
             border: none;
             cursor: pointer;
             background-size: contain;
@@ -290,11 +290,11 @@
         }
 
         .back-button {
-            background-image: url('img/Back Button.png');
+            background-image: url('img_shop/Back Button.png');
         }
 
         .buy-button {
-            background-image: url('img/Buy Button.png');
+            background-image: url('img_shop/Buy Button.png');
         }
 
         .garuda-color {
@@ -329,16 +329,16 @@
                 </div>
             </div>
             <div class="menu">
-                <a class="menu-item" href="#">DASHBOARD</a>
-                <a class="menu-item" href="#">TASK</a>
-                <a class="menu-item" href="#">SHOP</a>
+                <a class="menu-item" href="dashboard.jsp">DASHBOARD</a>
+                <a class="menu-item" href="task.jsp">TASK</a>
+                <a class="menu-item" href="shop.jsp">SHOP</a>
             </div>
             <img src="img_shop/Profile.png" alt="Profile" class="profile">
         </header>
 
         <div class="welcome-container">
             <img src="img_shop/WelcomeBanner.png" alt="Welcome Banner" class="welcome-banner">
-            <img src="img/Welcome Text.png" alt="Welcome Adventurer!" class="welcome-text">
+            <img src="img_shop/Welcome Text.png" alt="Welcome Adventurer!" class="welcome-text">
         </div>
 
         <div class="book-container">
