@@ -35,22 +35,22 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 1440px;
-            height: 1024px;
+            width: 2560px;
+            height: 1440px;
         }
 
         .background1 {
-            background: url('img/Background1.png') no-repeat center center;
+            background: url('img_shop/Background1.png') no-repeat center center;
             background-size: cover;
             z-index: -3;
         }
         .background2 {
-            background: url('img/Background2.png') no-repeat center center;
+            background: url('img_shop/Background2.png') no-repeat center center;
             background-size: cover;
             z-index: -2;
         }
         .background3 {
-            background: url('img/Background3.png') no-repeat center center;
+            background: url('img_shop/Background3.png') no-repeat center center;
             background-size: cover;
             z-index: -1;
         }
@@ -58,8 +58,8 @@
         .header {
             position: absolute;
             top: 20px;
-            left: 155px;
-            right: 155px;
+            left: 20px;
+            right: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -73,7 +73,7 @@
 
         .logo {
             width: 90px;
-            height: 90px;
+            height: 80px;
         }
 
         .taskplayer-text {
@@ -166,7 +166,7 @@
             transform: translateX(-50%);
             width: 950px;
             height: 650px;
-            background: url('img/book.png') no-repeat center;
+            background: url('img_shop/book.png') no-repeat center;
             background-size: contain;
         }
 
@@ -224,7 +224,7 @@
         .merchant {
             position: absolute;
             bottom: 130px;
-            left: 150px;
+            left: 100px;
             width: 280px;
             height: 450px;
         }
@@ -232,7 +232,7 @@
         .points-display {
             position: absolute;
             bottom: 40px;
-            left: 170px;
+            left: 115px;
             background: rgba(0, 0, 0, 0.5);
             color: white;
             padding: 15px 30px;
@@ -246,7 +246,7 @@
             left: 350px;
             width: 600px;
             height: 120px;
-            background: url('img/MerchantTextBanner.png') no-repeat center;
+            background: url('img_shop/MerchantTextBanner.png') no-repeat center;
             background-size: contain;
             display: flex;
             justify-content: center;
@@ -322,10 +322,10 @@
 
         <header class="header">
             <div class="logo-container">
-                <img src="img/Logo.png" alt="Logo" class="logo">
+                <img src="img_shop/Logo.png" alt="Logo" class="logo">
                 <div class="taskplayer-text">
-                    <img src="img/TaskPlayer.png" alt="TaskPlayer">
-                    <img src="img/TaskPlayer-1.png" alt="TaskPlayer">
+                    <img src="img_shop/TaskPlayer.png" alt="TaskPlayer">
+                    <img src="img_shop/TaskPlayer-1.png" alt="TaskPlayer">
                 </div>
             </div>
             <div class="menu">
@@ -333,36 +333,36 @@
                 <a class="menu-item" href="#">TASK</a>
                 <a class="menu-item" href="#">SHOP</a>
             </div>
-            <img src="img/Profile.png" alt="Profile" class="profile">
+            <img src="img_shop/Profile.png" alt="Profile" class="profile">
         </header>
 
         <div class="welcome-container">
-            <img src="img/WelcomeBanner.png" alt="Welcome Banner" class="welcome-banner">
+            <img src="img_shop/WelcomeBanner.png" alt="Welcome Banner" class="welcome-banner">
             <img src="img/Welcome Text.png" alt="Welcome Adventurer!" class="welcome-text">
         </div>
 
         <div class="book-container">
             <div class="character-grid">
                 <div class="character" data-character="GARUDA" onclick="selectCharacter('GARUDA')">
-                    <img src="img/Bird.png" alt="GARUDA">
+                    <img src="img_shop/Bird.png" alt="GARUDA">
                     <span class="character-name">GARUDA</span>
                 </div>
                 <div class="character pig" data-character="PIGLET" onclick="selectCharacter('PIGLET')">
-                    <img src="img/Pig.png" alt="PIGLET">
+                    <img src="img_shop/Pig.png" alt="PIGLET">
                     <span class="character-name">PIGLET</span>
                 </div>
                 <div class="character frog" data-character="FROGY" onclick="selectCharacter('FROGY')">
-                    <img src="img/Frog.png" alt="FROGY">
+                    <img src="img_shop/Frog.png" alt="FROGY">
                     <span class="character-name">FROGY</span>
                 </div>
                 <div class="character goat" data-character="THE GOAT" onclick="selectCharacter('THE GOAT')">
-                    <img src="img/Goat.png" alt="THE GOAT">
+                    <img src="img_shop/Goat.png" alt="THE GOAT">
                     <span class="character-name">THE GOAT</span>
                 </div>
             </div>
         </div>
 
-        <img src="img/Merchant.png" alt="Merchant" class="merchant">
+        <img src="img_shop/Merchant.png" alt="Merchant" class="merchant">
 
         <div class="points-display">POINTS : <span id="points-value"></span></div>
 
